@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hardik.easysplitbills">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.hardik.easysplitbills.SplashActivity"
+            android:theme="@style/HideAppBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.hardik.easysplitbills.FinalActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.hardik.easysplitbills.ExpenseActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hardik.easysplitbills.MainActivity"
+            android:theme="@style/HideToolBar"/>
+    </application>
+
+</manifest>

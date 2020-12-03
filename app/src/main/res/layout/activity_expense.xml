@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ExpenseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Bill Money"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etCost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="8"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Bill\nDescription"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:gravity="center"
+                android:hint="Eg. Shopping, Grocery" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="3dp"
+            android:text="Check all friends with whom you wanna share the bill"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="48dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:paddingHorizontal="10dp" />
+
+                    <Button
+                        android:id="@+id/btnAddFrnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/fht3"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="40">
+
+                <Button
+                    android:id="@+id/btnSplitEqual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="19"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Split Equally"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:background="@color/black" />
+
+                <Button
+                    android:id="@+id/btnSplitUnequal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="19"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Split Manually"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

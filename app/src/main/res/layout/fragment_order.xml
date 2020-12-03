@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".navfrags.OrderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layDefault"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgCart"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_order_def" />
+
+            <TextView
+                android:id="@+id/txtDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgCart"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="No expenses till now"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:gravity="start"
+                android:text="Your Expenses"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtTop"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

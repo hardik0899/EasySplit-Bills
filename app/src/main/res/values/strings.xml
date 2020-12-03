@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EasySplit</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="menudrawert1">Home</string>
+    <string name="menudrawert2">My Profile</string>
+    <string name="menudrawert3">Expense History</string>
+    <string name="menudrawert4">Log Out</string>
+    <string name="fht1">How to use</string>
+    <string name="fht2"><b>\u00b7</b> Click <b>Add Expense</b> button to add a new expense.\n\n<b>\u00b7</b> Distribute expense among friends equally or by shares.\n\n<b>\u00b7</b> Add friends using <b>Add Friend</b> button.</string>
+    <string name="fht3">Add Friend</string>
+    <string name="fht4">Add Expense</string>
+</resources>
